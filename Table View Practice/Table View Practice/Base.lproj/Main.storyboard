@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Table_View_Practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nVz-wG-2wy">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Table View" id="xPe-cx-Y5T"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="tcW-ZD-qua">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CELL_DEFAULT" id="F27-r7-1QV">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F27-r7-1QV" id="L0b-wA-bwq">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="EEg-wG-eDb"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="5VL-bM-teG"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="tcW-ZD-qua" secondAttribute="bottom" id="B8X-IJ-QB1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nVz-wG-2wy" secondAttribute="trailing" constant="-16" id="EXL-Wd-ljD"/>
+                            <constraint firstItem="tcW-ZD-qua" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="FxA-tV-TCS"/>
+                            <constraint firstItem="nVz-wG-2wy" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Phu-a6-OY8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tcW-ZD-qua" secondAttribute="trailing" constant="-16" id="R4g-Zb-gry"/>
+                            <constraint firstItem="tcW-ZD-qua" firstAttribute="top" secondItem="nVz-wG-2wy" secondAttribute="bottom" id="TF8-VT-Yhq"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="tcW-ZD-qua" secondAttribute="bottom" id="XJo-aJ-zdy"/>
+                            <constraint firstItem="tcW-ZD-qua" firstAttribute="top" secondItem="nVz-wG-2wy" secondAttribute="bottom" id="ese-tH-291"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tcW-ZD-qua" secondAttribute="trailing" constant="-16" id="fAJ-lk-mjr"/>
+                            <constraint firstItem="tcW-ZD-qua" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="fYe-43-ZrK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tcW-ZD-qua" secondAttribute="trailing" constant="-16" id="fdK-Vk-vu6"/>
+                            <constraint firstAttribute="centerX" secondItem="tcW-ZD-qua" secondAttribute="centerX" id="kb4-uN-Ahd"/>
+                            <constraint firstItem="nVz-wG-2wy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="n9i-aL-VdM"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="tcW-ZD-qua" secondAttribute="bottom" id="spM-k7-I7m"/>
+                            <constraint firstItem="tcW-ZD-qua" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="v3g-zx-ebp"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

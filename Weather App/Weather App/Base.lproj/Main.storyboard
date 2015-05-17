@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POa-da-s8c">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Weather" id="pKs-s0-sAX">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="D8U-h5-fxe">
+                                            <connections>
+                                                <segue destination="9G0-Hf-vCh" kind="show" id="Q5R-hM-quZ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="KF0-kc-5CP">
+                                            <connections>
+                                                <action selector="refreshWeather:" destination="vXZ-lx-hvc" id="Bbr-co-pky"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Jgv-qj-cvN">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="city" rowHeight="200" id="cPJ-d8-kEl" customClass="customCellClass" customModule="Weather_App" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cPJ-d8-kEl" id="WCx-Nr-s4W">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="Sua-Aq-GrQ"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="wzy-wR-UXw"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="POa-da-s8c" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="BBY-xD-4lA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jgv-qj-cvN" secondAttribute="trailing" constant="-16" id="EqK-BZ-4kD"/>
+                            <constraint firstItem="POa-da-s8c" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="JQU-XC-NKM"/>
+                            <constraint firstItem="Jgv-qj-cvN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="KBA-la-9nr"/>
+                            <constraint firstAttribute="centerX" secondItem="POa-da-s8c" secondAttribute="centerX" id="RUa-g4-yHG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="POa-da-s8c" secondAttribute="trailing" constant="-16" id="Wg6-BP-sWt"/>
+                            <constraint firstItem="Jgv-qj-cvN" firstAttribute="top" secondItem="POa-da-s8c" secondAttribute="bottom" id="XPp-ei-TiA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jgv-qj-cvN" secondAttribute="trailing" constant="-16" id="ZHX-ll-YUv"/>
+                            <constraint firstItem="Jgv-qj-cvN" firstAttribute="top" secondItem="POa-da-s8c" secondAttribute="bottom" id="dej-hG-SFO"/>
+                            <constraint firstItem="Jgv-qj-cvN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="g5x-ki-bFG"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Jgv-qj-cvN" secondAttribute="bottom" id="hNC-r2-OZX"/>
+                            <constraint firstItem="POa-da-s8c" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="hTa-dV-B6v"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Jgv-qj-cvN" secondAttribute="bottom" id="jVY-os-cuA"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="citiesTableView" destination="Jgv-qj-cvN" id="frf-5t-TX2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Add Location-->
+        <scene sceneID="rrB-Ok-Vjw">
+            <objects>
+                <viewController id="9G0-Hf-vCh" customClass="addLocation" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YIZ-Vy-g7w"/>
+                        <viewControllerLayoutGuide type="bottom" id="W4L-yu-lTV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uSZ-jU-Qgl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0r-Dd-GO1">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Add New Location" id="CBE-uJ-ASE">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="nyH-eh-xGc">
+                                            <connections>
+                                                <segue destination="vXZ-lx-hvc" kind="show" id="ulO-FL-GxM"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pune" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yQ6-fj-XMQ">
+                                <rect key="frame" x="16" y="88" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes" returnKeyType="done"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vqx-fm-hJy">
+                                <rect key="frame" x="145" y="147" width="30" height="30"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addCity:" destination="9G0-Hf-vCh" eventType="touchUpInside" id="oh1-aP-jbb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="h0r-Dd-GO1" secondAttribute="trailing" constant="-16" id="77T-Fv-VG5"/>
+                            <constraint firstItem="yQ6-fj-XMQ" firstAttribute="trailing" secondItem="uSZ-jU-Qgl" secondAttribute="trailingMargin" id="GxN-ut-Jhb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vqx-fm-hJy" secondAttribute="trailing" constant="129" id="LHz-aG-6Ij"/>
+                            <constraint firstAttribute="centerX" secondItem="Vqx-fm-hJy" secondAttribute="centerX" id="O96-GS-CRl"/>
+                            <constraint firstAttribute="centerX" secondItem="yQ6-fj-XMQ" secondAttribute="centerX" id="OEe-Va-M3H"/>
+                            <constraint firstItem="Vqx-fm-hJy" firstAttribute="top" secondItem="yQ6-fj-XMQ" secondAttribute="bottom" constant="29" id="SKq-Ve-sCm"/>
+                            <constraint firstItem="yQ6-fj-XMQ" firstAttribute="leading" secondItem="uSZ-jU-Qgl" secondAttribute="leadingMargin" id="T51-zl-HuP"/>
+                            <constraint firstItem="yQ6-fj-XMQ" firstAttribute="top" secondItem="h0r-Dd-GO1" secondAttribute="bottom" constant="24" id="Yjg-nh-Bgh"/>
+                            <constraint firstItem="Vqx-fm-hJy" firstAttribute="leading" secondItem="uSZ-jU-Qgl" secondAttribute="leadingMargin" constant="129" id="Yjj-Nc-rBx"/>
+                            <constraint firstItem="h0r-Dd-GO1" firstAttribute="leading" secondItem="uSZ-jU-Qgl" secondAttribute="leadingMargin" constant="-16" id="bcV-wE-5Ba"/>
+                            <constraint firstItem="h0r-Dd-GO1" firstAttribute="top" secondItem="YIZ-Vy-g7w" secondAttribute="bottom" id="wyL-pN-zJV"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="cityName" destination="yQ6-fj-XMQ" id="otd-X9-c3n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KCy-fv-7r0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992" y="285"/>
+        </scene>
+    </scenes>
+</document>
