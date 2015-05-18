@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Tic_Tac_Toe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" tag="9" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="board.png" translatesAutoresizingMaskIntoConstraints="NO" id="NuZ-kG-R4i">
+                                <rect key="frame" x="35" y="159" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="DzC-kX-qIX"/>
+                                    <constraint firstAttribute="height" constant="250" id="ToQ-Nk-u8i"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdU-dX-Gc3">
+                                <rect key="frame" x="47" y="167" width="64" height="64"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="A5A-Sw-iuU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxB-Us-OsB">
+                                <rect key="frame" x="47" y="252" width="64" height="64"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="raZ-5N-Ivy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1KU-yO-IXR">
+                                <rect key="frame" x="47" y="338" width="64" height="64"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hkM-jV-k7a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCG-Vv-K2k">
+                                <rect key="frame" x="128" y="338" width="64" height="64"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oZo-LJ-dVj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zB8-Vd-eRJ">
+                                <rect key="frame" x="209" y="338" width="64" height="64"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CnN-MS-Z97"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuD-BU-T3q">
+                                <rect key="frame" x="128" y="252" width="64" height="64"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qba-uG-fmb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIk-tp-6YS">
+                                <rect key="frame" x="209" y="252" width="64" height="64"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="x6Q-6Z-HaF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZe-ep-Z52">
+                                <rect key="frame" x="128" y="167" width="64" height="64"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZAh-uM-TFX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdk-Dh-50r">
+                                <rect key="frame" x="209" y="167" width="64" height="64"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="DmQ-9k-VXp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="11" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TzX-DK-nKi">
+                                <rect key="frame" x="16" y="449" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="zxB-Us-OsB" firstAttribute="bottom" secondItem="NuZ-kG-R4i" secondAttribute="bottom" constant="-93" id="1cx-qu-dIN"/>
+                            <constraint firstItem="NuZ-kG-R4i" firstAttribute="bottom" secondItem="QCG-Vv-K2k" secondAttribute="bottom" constant="7" id="1k3-nH-bLY"/>
+                            <constraint firstItem="oIk-tp-6YS" firstAttribute="leading" secondItem="NuZ-kG-R4i" secondAttribute="leading" constant="174" id="2bN-KQ-nz6"/>
+                            <constraint firstItem="oIk-tp-6YS" firstAttribute="bottom" secondItem="NuZ-kG-R4i" secondAttribute="bottom" constant="-93" id="55b-eh-wtJ"/>
+                            <constraint firstItem="NuZ-kG-R4i" firstAttribute="leading" secondItem="QCG-Vv-K2k" secondAttribute="leading" constant="-93" id="5aC-vl-yAN"/>
+                            <constraint firstAttribute="centerX" secondItem="NuZ-kG-R4i" secondAttribute="centerX" id="65b-VT-hiZ"/>
+                            <constraint firstItem="NuZ-kG-R4i" firstAttribute="bottom" secondItem="kdk-Dh-50r" secondAttribute="bottom" constant="178" id="689-HI-tCw"/>
+                            <constraint firstItem="NuZ-kG-R4i" firstAttribute="trailing" secondItem="1KU-yO-IXR" secondAttribute="trailing" constant="174" id="6hD-R5-39H"/>
+                            <constraint firstItem="sdU-dX-Gc3" firstAttribute="trailing" secondItem="NuZ-kG-R4i" secondAttribute="trailing" constant="-174" id="8EL-ZL-vnM"/>
+                            <constraint firstItem="zxB-Us-OsB" firstAttribute="trailing" secondItem="NuZ-kG-R4i" secondAttribute="trailing" constant="-174" id="AKp-rV-fFD"/>
+                            <constraint firstItem="NuZ-kG-R4i" firstAttribute="top" secondItem="oZe-ep-Z52" secondAttribute="top" constant="-8" id="Clm-zt-voO"/>
+                            <constraint firstItem="NuZ-kG-R4i" firstAttribute="bottom" secondItem="1KU-yO-IXR" secondAttribute="bottom" constant="7" id="Dcw-R6-caz"/>
+                            <constraint firstItem="sdU-dX-Gc3" firstAttribute="top" secondItem="NuZ-kG-R4i" secondAttribute="top" constant="8" id="FJ3-Hw-Kcu"/>
+                            <constraint firstItem="NuZ-kG-R4i" firstAttribute="leading" secondItem="1KU-yO-IXR" secondAttribute="leading" constant="-12" id="Fm0-Qv-6Uq"/>
+                            <constraint firstItem="TzX-DK-nKi" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="HGP-t5-snn"/>
+                            <constraint firstItem="NuZ-kG-R4i" firstAttribute="trailing" secondItem="oZe-ep-Z52" secondAttribute="trailing" constant="93" id="Hex-ht-6tA"/>
+                            <constraint firstItem="kuD-BU-T3q" firstAttribute="top" secondItem="NuZ-kG-R4i" secondAttribute="top" constant="93" id="Ky9-k9-rnD"/>
+                            <constraint firstItem="NuZ-kG-R4i" firstAttribute="leading" secondItem="kdk-Dh-50r" secondAttribute="leading" constant="-174" id="L7m-nN-T3I"/>
+                            <constraint firstItem="NuZ-kG-R4i" firstAttribute="leading" secondItem="oZe-ep-Z52" secondAttribute="leading" constant="-93" id="LBk-ZQ-KSg"/>
+                            <constraint firstItem="NuZ-kG-R4i" firstAttribute="trailing" secondItem="kdk-Dh-50r" secondAttribute="trailing" constant="12" id="Nep-jG-nsk"/>
+                            <constraint firstItem="NuZ-kG-R4i" firstAttribute="bottom" secondItem="zB8-Vd-eRJ" secondAttribute="bottom" constant="7" id="Rds-YK-M3Y"/>
+                            <constraint firstItem="kuD-BU-T3q" firstAttribute="trailing" secondItem="NuZ-kG-R4i" secondAttribute="trailing" constant="-93" id="TWq-fV-oX6"/>
+                            <constraint firstItem="NuZ-kG-R4i" firstAttribute="top" secondItem="kdk-Dh-50r" secondAttribute="top" constant="-8" id="U2p-HX-wvK"/>
+                            <constraint firstItem="sdU-dX-Gc3" firstAttribute="bottom" secondItem="NuZ-kG-R4i" secondAttribute="bottom" constant="-178" id="UeM-aq-6TM"/>
+                            <constraint firstItem="kuD-BU-T3q" firstAttribute="leading" secondItem="NuZ-kG-R4i" secondAttribute="leading" constant="93" id="ZOS-yG-P3k"/>
+                            <constraint firstItem="zxB-Us-OsB" firstAttribute="leading" secondItem="NuZ-kG-R4i" secondAttribute="leading" constant="12" id="agP-Kc-yAb"/>
+                            <constraint firstAttribute="centerY" secondItem="NuZ-kG-R4i" secondAttribute="centerY" id="c98-O9-Pm3"/>
+                            <constraint firstItem="NuZ-kG-R4i" firstAttribute="trailing" secondItem="zB8-Vd-eRJ" secondAttribute="trailing" constant="12" id="f04-Wf-jTW"/>
+                            <constraint firstAttribute="centerX" secondItem="NuZ-kG-R4i" secondAttribute="centerX" id="huA-Pw-s2P"/>
+                            <constraint firstItem="NuZ-kG-R4i" firstAttribute="trailing" secondItem="QCG-Vv-K2k" secondAttribute="trailing" constant="93" id="l4d-Nz-Ecb"/>
+                            <constraint firstItem="NuZ-kG-R4i" firstAttribute="top" secondItem="QCG-Vv-K2k" secondAttribute="top" constant="-179" id="lN2-QJ-bJH"/>
+                            <constraint firstItem="zxB-Us-OsB" firstAttribute="top" secondItem="NuZ-kG-R4i" secondAttribute="top" constant="93" id="mpf-Zh-HLO"/>
+                            <constraint firstAttribute="centerY" secondItem="NuZ-kG-R4i" secondAttribute="centerY" id="nrA-VF-ZXg"/>
+                            <constraint firstItem="oIk-tp-6YS" firstAttribute="trailing" secondItem="NuZ-kG-R4i" secondAttribute="trailing" constant="-12" id="rXJ-7X-Tl3"/>
+                            <constraint firstItem="kuD-BU-T3q" firstAttribute="bottom" secondItem="NuZ-kG-R4i" secondAttribute="bottom" constant="-93" id="rvj-Un-WdG"/>
+                            <constraint firstItem="NuZ-kG-R4i" firstAttribute="top" secondItem="zB8-Vd-eRJ" secondAttribute="top" constant="-179" id="sdq-ss-4CQ"/>
+                            <constraint firstItem="TzX-DK-nKi" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ud9-gf-9Ew"/>
+                            <constraint firstItem="sdU-dX-Gc3" firstAttribute="leading" secondItem="NuZ-kG-R4i" secondAttribute="leading" constant="12" id="uhv-N5-Rcf"/>
+                            <constraint firstItem="NuZ-kG-R4i" firstAttribute="bottom" secondItem="oZe-ep-Z52" secondAttribute="bottom" constant="178" id="ujO-DQ-ofI"/>
+                            <constraint firstItem="oIk-tp-6YS" firstAttribute="top" secondItem="NuZ-kG-R4i" secondAttribute="top" constant="93" id="wZV-hp-cEW"/>
+                            <constraint firstItem="NuZ-kG-R4i" firstAttribute="top" secondItem="1KU-yO-IXR" secondAttribute="top" constant="-179" id="wjj-9J-Ot8"/>
+                            <constraint firstItem="NuZ-kG-R4i" firstAttribute="leading" secondItem="zB8-Vd-eRJ" secondAttribute="leading" constant="-174" id="zTe-XV-IQn"/>
+                            <constraint firstItem="NuZ-kG-R4i" firstAttribute="centerY" secondItem="TzX-DK-nKi" secondAttribute="centerY" constant="-175.5" id="zhT-Yq-1HO"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="65b-VT-hiZ"/>
+                                <exclude reference="c98-O9-Pm3"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Dbe-hW-seL" appends="YES" id="hyd-m1-h2r"/>
+                        </connections>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tapRecognizer" destination="Dbe-hW-seL" id="aBs-QZ-xQ9"/>
+                        <outlet property="winningLabel" destination="TzX-DK-nKi" id="r99-E9-TBG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Dbe-hW-seL">
+                    <connections>
+                        <action selector="userTapped:" destination="vXZ-lx-hvc" id="M99-dh-gc9"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="board.png" width="744" height="783"/>
+    </resources>
+</document>
